@@ -14,7 +14,6 @@ class Analyzer:
         with torch.no_grad():
             output = self.model(img)
 
-        # Assuming output is a list and the first element contains the bounding boxes
         bounding_boxes = []
         for result in output[0].boxes.xyxy.cpu().numpy():
             x1, y1, x2, y2 = map(int, result[:4])
@@ -36,6 +35,6 @@ class Analyzer:
         # Save the image
         img.save(output_path)
 
-# Example usage
+# Example usage for testing
 analyzer = Analyzer(model=YOLO('porosity_model.pt'))
 analyzer.process_image('example.jpeg')

@@ -18,7 +18,7 @@ class PorosityApp(QWidget):
 
         # Initialize aspect ratios list and weights
         self.aspect_ratios = []
-        self.weights = []  # Add this line to initialize the weights
+        self.weights = []  
 
         # Store file path and bounding boxes as class attributes
         self.file_path = None
@@ -111,7 +111,6 @@ class PorosityApp(QWidget):
             self.display_image_with_boxes(img_with_boxes, aspect_ratio, classification, confidences)
 
     def calculate_aspect_ratio(self, bounding_boxes):
-        # Assuming x1, y1, x2, y2 format for bounding boxes
         x1, y1, x2, y2 = bounding_boxes[0]
         width = x2 - x1
         height = y2 - y1
