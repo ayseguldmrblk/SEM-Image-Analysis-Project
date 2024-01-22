@@ -18,7 +18,7 @@ The Porosity Detection App is a simple application built using PyQt5 and PyTorch
     pip install -r requirements.txt
     ```
   
-- **test.py**: Python script for testing. (Added using Git LFS)
+- **test.py**: Python script for testing. 
 
 ## Prerequisites
 
